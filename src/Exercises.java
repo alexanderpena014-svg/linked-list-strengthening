@@ -56,7 +56,18 @@ public class Exercises {
      * @return the head of the list with the last element removed
      */
     public static ListNode removeLast(ListNode head) {
-        
+        if (head == null || head.next == null) {
+            return null;
+        }
+
+        ListNode removeEnd = head;
+
+        while(removeEnd.next.next != null) {
+            removeEnd = removeEnd.next;
+        }
+        removeEnd.next = null;
+
+        return null;
     }
 
     /**
